@@ -25,10 +25,8 @@ public class Burger extends Product {
 
     @Override
     public String toString() {
-        return "Burger{" +
-            "type='" + type + '\'' +
-            ", price=" + price +
-            ", toppings=" + toppings +'}';
+        return "'" + type + "', price=" + price +
+            ", toppings:" + toppings;
     }
 
     @Override

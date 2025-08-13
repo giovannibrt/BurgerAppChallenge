@@ -58,11 +58,7 @@ public class Menu {
 
     @Override
     public String toString() {
-        return "Menu{" +
-                "burger=" + burger +
-                ", sideItem=" + sideItem +
-                ", drink=" + drink +
-                '}';
+        return String.format("Menu:\n\t- Burger     %s\n\t- Side Item  %s\n\t- Drink      %s\n", burger, sideItem, drink);
     }
 
 }

@@ -10,11 +10,7 @@ public class DeluxeMenu extends Menu {
 
     @Override
     public String toString() {
-        return "DeluxeMenu{" +
-                "burger=" + burger +
-                ", sideItem=" + sideItem +
-                ", drink=" + drink +
-                '}';
+        return String.format("Deluxe Menu:\n\t- Burger     %s\n\t- Side Item  %s\n\t- Drink      %s\n", burger, sideItem, drink);
     }
 
     @Override

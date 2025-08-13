@@ -9,14 +9,14 @@ public class DeluxeBurger extends Burger {
         this.maxToppings = 5; // Deluxe burgers can have more toppings
     }
 
-    @Override
-    public String toString() {
-        return "DeluxeBurger{" +
-                "type='" + getType() + '\'' +
-                ", price=" + getPrice() +
-                ", toppings=" + toppings +
-                '}';
-    }
+    // @Override
+    // public String toString() {
+    //     return "DeluxeBurger{" +
+    //             "type='" + getType() + '\'' +
+    //             ", price=" + getPrice() +
+    //             ", toppings=" + toppings +
+    //             '}';
+    // }
 
     // @Override
     // public double getPrice() {

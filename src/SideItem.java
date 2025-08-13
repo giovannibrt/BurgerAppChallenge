@@ -16,10 +16,7 @@ public class SideItem extends Product {
 
     @Override
     public String toString() {
-        return "SideItem{" +
-                "type='" + type + '\'' +
-                ", price=" + price +
-                '}';
+        return "'" + type + "', price=" + price;
     }
 
     @Override

@@ -32,11 +32,7 @@ public class Drink extends Product {
 
     @Override
     public String toString() {
-        return "Drink{" +
-                "type='" + type + '\'' +
-                ", size=" + size +
-                ", price=" + price +
-                '}';
+        return "'" + type + " " + size + "', price=" + price;
     }
 
     @Override

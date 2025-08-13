@@ -19,10 +19,7 @@ public class Topping extends Product {
 
     @Override
     public String toString() {
-        return "Topping{" +
-                "type='" + getType() + '\'' +
-                ", price=" + getPrice() +
-                '}';
+        return "'" + getType() + "' (price=" + getPrice() + ")";
     }
 
     @Override
