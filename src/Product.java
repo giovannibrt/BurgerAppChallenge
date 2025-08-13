@@ -1,4 +1,4 @@
-public class Product {
+public abstract class Product {
 
     protected String type;
     protected double price;
@@ -35,9 +35,7 @@ public class Product {
         return false;
     }
 
-    protected void setPrice() {
-        this.price = 0.0;
-    }
+    protected abstract void setPrice();
 
     public double getPrice() {
         return price;
