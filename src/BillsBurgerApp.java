@@ -1,13 +1,31 @@
+import java.util.ArrayList;
 
 public class BillsBurgerApp {
+
+    public record Order(ArrayList<Menu> menus) {
+
+        private double getTotal() {
+            double orderTotal = 0;
+            for (var m : menus) orderTotal += m.calculateTotalPrice();
+            return orderTotal;
+        }
+    }
+
+    private static ArrayList<Order> dailyOrders;
 
     public static void main(String[] args) throws Exception {
         System.out.println("\nStarting Bill's Burger App...");
         System.out.println("\n-----------------------------------\n");
 
+        dailyOrders = new ArrayList<>();
+
         testRun();
 
+        double dailyTotal = 0;
+        for (var o : dailyOrders) dailyTotal += o.getTotal();
+
         System.out.println("Thank you for using Bill's Burger App!");
+        System.out.println("Total revenue of the day: $" + dailyTotal);
         System.out.println("Have a great day!");
         System.out.println("\n-----------------------------------\n");
     }
@@ -15,7 +33,8 @@ public class BillsBurgerApp {
     public static void testRun() {
         System.out.println("\nTest Run...");  
         System.out.println("\n-----------------------------------\n");
-        //System.out.println("Please select your menu");
+
+        var orderList = new ArrayList<Menu>();
 
         // Example of creating a base Menu
         Menu baseMenu = new Menu();
@@ -24,8 +43,10 @@ public class BillsBurgerApp {
         baseMenu.changeSideItemType("Salad");
         baseMenu.changeDrinkType("Pepsi");
         baseMenu.changeDrinkSize('M');
-        System.out.println("Updated " + baseMenu);
+        System.out.println("Updated " + baseMenu);        
         System.out.println("Total Price: $" + baseMenu.calculateTotalPrice());
+        orderList.add(baseMenu);
+        System.out.println("Menu added to current order");
         System.out.println("\n-----------------------------------\n");
 
         // Example of creating a Custom Menu
@@ -39,6 +60,8 @@ public class BillsBurgerApp {
         customMenu.addBurgerTopping(new Topping("Mustard"));
         System.out.println("Custom " + customMenu);
         System.out.println("Total Price: $" + customMenu.calculateTotalPrice());
+        orderList.add(customMenu);
+        System.out.println("Menu added to current order");
         System.out.println("\n-----------------------------------\n");
 
         // Example of creating a Deluxe Menu
@@ -55,6 +78,13 @@ public class BillsBurgerApp {
         deluxeMenu.addBurgerTopping(new Topping("Avocado"));
         System.out.println("\nUpdated " + deluxeMenu);
         System.out.println("Total Price after change: $" + deluxeMenu.calculateTotalPrice());
+        orderList.add(deluxeMenu);
+        System.out.println("Deluxe menu added to current order");
+        System.out.println("\n-----------------------------------\n");
+
+        var order = new Order(orderList);
+        System.out.println("Total order price: " + order.getTotal());
+        dailyOrders.add(order);
         System.out.println("\n-----------------------------------\n");
 
     }
