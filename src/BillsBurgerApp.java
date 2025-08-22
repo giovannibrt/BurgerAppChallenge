@@ -1,9 +1,19 @@
 
-
 public class BillsBurgerApp {
 
     public static void main(String[] args) throws Exception {
         System.out.println("\nStarting Bill's Burger App...");
+        System.out.println("\n-----------------------------------\n");
+
+        testRun();
+
+        System.out.println("Thank you for using Bill's Burger App!");
+        System.out.println("Have a great day!");
+        System.out.println("\n-----------------------------------\n");
+    }
+    
+    public static void testRun() {
+        System.out.println("\nTest Run...");  
         System.out.println("\n-----------------------------------\n");
         //System.out.println("Please select your menu");
 
@@ -47,8 +57,5 @@ public class BillsBurgerApp {
         System.out.println("Total Price after change: $" + deluxeMenu.calculateTotalPrice());
         System.out.println("\n-----------------------------------\n");
 
-        System.out.println("Thank you for using Bill's Burger App!");
-        System.out.println("Have a great day!");
-        System.out.println("\n-----------------------------------\n");
     }
 }
