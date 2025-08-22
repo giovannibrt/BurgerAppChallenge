@@ -24,9 +24,8 @@ public class BillsBurgerApp {
         double dailyTotal = 0;
         for (var o : dailyOrders) dailyTotal += o.getTotal();
 
-        System.out.println("Thank you for using Bill's Burger App!");
         System.out.println("Total revenue of the day: $" + dailyTotal);
-        System.out.println("Have a great day!");
+        System.out.println("Thank you for using Bill's Burger App!");
         System.out.println("\n-----------------------------------\n");
     }
     
@@ -64,6 +63,13 @@ public class BillsBurgerApp {
         System.out.println("Menu added to current order");
         System.out.println("\n-----------------------------------\n");
 
+        var order = new Order(orderList);
+        System.out.println("Total order price: " + order.getTotal());
+        dailyOrders.add(order);
+        System.out.println("\n-----------------------------------\n");
+
+        orderList = new ArrayList<>();
+
         // Example of creating a Deluxe Menu
         DeluxeMenu deluxeMenu = new DeluxeMenu();
         System.out.println(deluxeMenu);
@@ -82,9 +88,9 @@ public class BillsBurgerApp {
         System.out.println("Deluxe menu added to current order");
         System.out.println("\n-----------------------------------\n");
 
-        var order = new Order(orderList);
-        System.out.println("Total order price: " + order.getTotal());
-        dailyOrders.add(order);
+        var order2 = new Order(orderList);
+        System.out.println("Total order price: " + order2.getTotal());
+        dailyOrders.add(order2);
         System.out.println("\n-----------------------------------\n");
 
     }
