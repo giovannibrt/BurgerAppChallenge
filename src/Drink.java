@@ -1,7 +1,7 @@
 public class Drink extends Product {
 
     private char size; // 'S' for Small, 'M' for Medium, 'L' for Large
-    private static final String[] VALID_TYPES = {
+    public static final String[] VALID_TYPES = {
         "Coke", "Pepsi", "Sprite", "Fanta",
         "Lemonade", "Iced Tea", "Water", "Coffee",
         "Hot Chocolate", "Orange Juice", "Apple Juice"

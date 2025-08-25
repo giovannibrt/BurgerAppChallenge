@@ -6,7 +6,7 @@ public class Burger extends Product {
 
     protected List<Topping> toppings;
     protected int maxToppings;
-    private static final String[] VALID_TYPES = {
+    public static final String[] VALID_TYPES = {
         "Classic", "Cheeseburger", "Bacon", "Bacon Cheeseburger",
         "Double", "Chicken", "Veggie"
     };
@@ -72,4 +72,5 @@ public class Burger extends Product {
         double toppingPrice = toppings.stream().mapToDouble(Topping::getPrice).sum();
         return this.price + toppingPrice;
     }
+    
 }

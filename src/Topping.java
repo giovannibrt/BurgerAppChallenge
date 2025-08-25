@@ -1,6 +1,6 @@
 public class Topping extends Product {
 
-    private static final String[] VALID_TYPES = {
+    public static final String[] VALID_TYPES = {
         "Lettuce", "Tomato", "Cheese", "Bacon",
         "Onion", "Pickles", "Jalapenos", "Avocado",
         "Mushrooms", "BBQ Sauce", "Ketchup", "Mustard",

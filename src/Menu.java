@@ -15,6 +15,10 @@ public class Menu {
         this.drink = drink;
     }
 
+    public Burger getBurger()     { return this.burger; }
+    public SideItem getSideItem() { return this.sideItem; }
+    public Drink getDrink()       { return this.drink; }
+
     public void changeBurgerType(String type) {
         try {
             burger.setType(type);

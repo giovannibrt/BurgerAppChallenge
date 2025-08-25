@@ -1,6 +1,6 @@
 public class SideItem extends Product {
 
-    private static final String[] VALID_TYPES = {
+    public static final String[] VALID_TYPES = {
         "Fries", "Onion Rings", "Salad", "Ice Cream"
     };
     
